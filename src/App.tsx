@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { useAppDispatch } from './hooks/useAppDispatch';
+import { cartActions } from './store/slices/cartSlice';
+import { useAppSelector } from './hooks/useAppSelector';
 
 function App() {
   return (
