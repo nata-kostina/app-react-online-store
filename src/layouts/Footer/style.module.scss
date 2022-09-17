@@ -1,0 +1,90 @@
+.footer {
+  @apply bg-[#f1eeed] text-[#193a43] border-t-[#ece3df] text-sm;
+}
+
+.footer__inner {
+  @apply pt-[90px] mx-auto;
+}
+
+.footer__info, .footer__copyright {
+  @apply flex justify-between;
+}
+
+.footer__info {
+  @apply pb-12;
+}
+
+.footer__copyright {
+  @apply py-5 border-t border-t-[#ece3df];;
+}
+
+.section {
+  @apply basis-[33.3%] px-5 text-center;
+
+  & .section__title {
+    @apply capitalize mb-6 text-[#193a43] text-4xl;
+  }
+
+  & .section__subtitle {
+    @apply mb-2 text-sm;
+  }
+
+  & .section__content {
+    @apply flex flex-col justify-center items-center;
+  }
+}
+
+.list.usefull-links {
+  @apply list-none flex flex-col items-center;
+
+  .list__item {
+    @apply mb-2.5;
+
+  }
+}
+
+.link {
+  @apply no-underline;
+}
+
+.link-usefull {
+  @apply uppercase text-[#193a43];
+}
+
+.input-group {
+  @apply text-[#193a43] text-sm;
+}
+
+.input-newsletter {
+  @apply border-b-[#193a43] border-x-0 border-t-0 border-b-2
+  bg-transparent p-0;
+}
+
+.btn {
+ // @apply border-none;
+}
+
+.btn_underlined {
+  @apply border-b-[#193a43] border-x-0 border-t-0 border-b-2
+  uppercase;
+}
+
+.contacts-list {
+  @apply text-center;
+
+  & .list__item {
+    @apply pb-2.5;
+  }
+}
+
+.link-contact {
+  @apply uppercase;
+}
+
+.payment-list {
+  @apply flex;
+
+  & .list__item:not(:last-child) {
+    @apply mr-2;
+  }
+}

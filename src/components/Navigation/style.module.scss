@@ -1,0 +1,37 @@
+.nav {
+  @apply self-stretch flex;
+  & .list {
+    @apply list-none flex  self-stretch;
+
+    & .list__item {
+      @apply self-stretch flex;
+
+      &:not(:last-child) {
+        @apply mr-12;
+      }
+
+      & .nav__link {
+        @apply self-stretch flex items-center justify-between
+        relative 
+        text-[#193a43] uppercase 
+        hover:text-[#416e7a]
+        
+        before:content-[''] before:w-0 
+        before:absolute before:left-0 before:bottom-0
+        before:border-b-2 before:border-b-[#416e7a]
+        before:transition-width before:duration-[0.3s] before:ease-in-out
+        hover:before:w-full;
+      }
+    }
+  }
+}
+
+/* content: "";
+    position: absolute;
+    right: 0;
+    bottom: -42px;
+    width: 0;
+    border-bottom: 2px solid var(--header-menuhover);
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+    z-index: 10; */

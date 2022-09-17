@@ -1,0 +1,7 @@
+.logo {
+  @apply w-[120px] h-auto;
+
+  & .logo__img {
+    @apply w-full object-cover py-4;
+  }
+}

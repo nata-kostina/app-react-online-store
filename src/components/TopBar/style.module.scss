@@ -1,0 +1,11 @@
+.topbar {
+  @apply bg-[#193A43] h-[46px] uppercase;
+}
+
+.topbar__inner {
+  @apply flex justify-between items-center h-full text-white text-[14px];
+}
+
+.promo {
+  @apply uppercase;
+}

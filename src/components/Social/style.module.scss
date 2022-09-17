@@ -1,0 +1,13 @@
+.list {
+  @apply flex justify-between list-none;
+
+  & .list__item {
+   
+    & svg {
+      @apply h-7 w-7 p-1;
+    }
+    &:not(:last-child) {
+      @apply mr-6;
+    }
+  }
+}

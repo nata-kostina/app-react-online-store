@@ -1,0 +1,17 @@
+.header {
+}
+
+.header__inner {
+  @apply flex items-center justify-between;
+}
+
+.list.tools {
+  @apply list-none flex items-center justify-between;
+  & .list__item {
+    @apply self-stretch h-[40px] w-[40px] flex items-center justify-between;
+
+    &:not(:last-child) {
+      @apply mr-4;
+    }
+  }
+}

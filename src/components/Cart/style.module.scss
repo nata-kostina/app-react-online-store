@@ -1,0 +1,22 @@
+.cart {
+  @apply relative h-full w-full;
+
+  &__link {
+    @apply block h-full w-full p-2;
+    &:hover {
+      .cart__img > svg {
+        @apply stroke-[#416e7a] fill-[#416e7a];
+      }
+    }
+  }
+
+  &__img > svg {
+      @apply h-full w-full; 
+  }
+
+  &__quantity {
+    @apply flex items-center justify-center text-white leading-none bg-[#193a43] 
+    w-[20px] h-[20px] rounded-[50%]
+    absolute -bottom-[1px] -right-[0px];
+  }
+}

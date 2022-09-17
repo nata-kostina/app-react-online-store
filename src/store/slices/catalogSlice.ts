@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 const initialState = {
-  products: [] as string[],
+  products: ['1', '2', '3', '4'],
 }
 
 export const catalogSlice = createSlice({

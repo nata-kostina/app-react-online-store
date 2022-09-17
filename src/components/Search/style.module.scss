@@ -1,0 +1,16 @@
+.search {
+  @apply h-full w-full;
+
+  &__link {
+    @apply block h-full w-full p-2;
+
+    &:hover {
+      .search__img > svg {
+      @apply stroke-[#416e7a] fill-[#416e7a];
+    }
+    }
+  }
+  &__img > svg {
+      @apply h-full w-full;
+  }
+}
