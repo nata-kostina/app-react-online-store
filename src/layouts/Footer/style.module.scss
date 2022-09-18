@@ -34,12 +34,19 @@
   }
 }
 
-.list.usefull-links {
-  @apply list-none flex flex-col items-center;
+.list {
+  @apply list-none;
+
+  & .list__item {
+    @apply color-transition hover:text-[#538C9B];
+  }
+}
+
+.usefull-links {
+  @apply flex flex-col items-center;
 
   .list__item {
     @apply mb-2.5;
-
   }
 }
 
@@ -48,7 +55,7 @@
 }
 
 .link-usefull {
-  @apply uppercase text-[#193a43];
+  @apply uppercase ;
 }
 
 .input-group {
@@ -60,13 +67,9 @@
   bg-transparent p-0;
 }
 
-.btn {
- // @apply border-none;
-}
-
 .btn_underlined {
   @apply border-b-[#193a43] border-x-0 border-t-0 border-b-2
-  uppercase;
+  uppercase hover:text-[#538C9B] color-transition;
 }
 
 .contacts-list {

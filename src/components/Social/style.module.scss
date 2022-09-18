@@ -2,12 +2,30 @@
   @apply flex justify-between list-none;
 
   & .list__item {
-   
+    @apply color-transition;   
     & svg {
       @apply h-7 w-7 p-1;
     }
     &:not(:last-child) {
       @apply mr-6;
+    }
+  }
+
+  &_light {
+    & .list__item {
+      @apply text-white;
+      &:hover {
+        @apply text-[#538C9B];
+      }
+    }
+  }
+
+  &_dark {
+    & .list__item {
+      @apply text-black;
+      &:hover {
+        @apply text-[#538C9B];
+      }
     }
   }
 }

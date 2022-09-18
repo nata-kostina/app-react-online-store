@@ -9,8 +9,13 @@ export const storeApi = createApi({
   }),
   tagTypes: ['Catalog', 'Cart'],
   endpoints: (build) => ({
-    getAllProducts: build.query<IProduct[], void>({
-      query: () => 'products',
+    getAllProducts: build.query<IProduct[], number|void>({
+      query: (limit = 15) => ({
+        url: 'products',
+        params: {
+          limit,
+        }
+      }),
       providesTags: ['Catalog'],
     })
   }),

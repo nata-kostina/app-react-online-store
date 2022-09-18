@@ -6,7 +6,8 @@ import MaestroSVG from '../../assets/images/payment-methods/maestro.svg';
 import MasterSVG from '../../assets/images/payment-methods/mastercard.svg';
 import ShopPaySVG from '../../assets/images/payment-methods/shop-pay.svg';
 import VisaSVG from '../../assets/images/payment-methods/visa.svg';
-import Social from '../../components/Social/Social';
+import Social from '../../components/social/Social';
+import { ThemeEnum } from '../../types/types';
 
 const Footer = () => {
   return (
@@ -49,7 +50,7 @@ const Footer = () => {
                     <a href='mailto:oworganic@gmail.com' className={`${styles.link} ${styles['link-contact']}`}>Oworganic@gmail.com</a>
                   </li>
                   <li className={styles.list__item}>
-                    <a href='#' className={`${styles.link} ${styles['link-contact']}`}>1638 ABBOT KINNEY BLVD - PH
+                    <a href='https://goo.gl/maps/REPnHhZTUVtPmZns9' className={`${styles.link} ${styles['link-contact']}`}>1638 ABBOT KINNEY BLVD - PH
                       VENICE, CA 90265</a>
                   </li>
                 </ul>
@@ -59,7 +60,7 @@ const Footer = () => {
           <div className={styles.footer__copyright}>
             <div className={styles.section}>
               <div className={styles.section__content}>
-                <Social />
+                <Social theme={ThemeEnum.DARK}/>
               </div>
             </div>
 

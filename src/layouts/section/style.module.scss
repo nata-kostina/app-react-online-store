@@ -1,0 +1,7 @@
+.section {
+  @apply py-20;
+
+  &__title {
+    @apply text-4xl text-[#193a43];
+  }
+}

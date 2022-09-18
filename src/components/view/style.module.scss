@@ -1,0 +1,42 @@
+.view-group {
+  @apply flex;
+}
+
+.btn {
+  @apply
+  relative 
+  h-[35px] w-[36px]
+  text-center
+  border border-[#dcdcdc]
+  
+  before:content-[""] before:bg-[#dcdcdc]
+  before:absolute before:left-[7px] before:top-[13px]
+  before:w-2 before:h-2 before:rounded-sm
+  before:shadow-[13px_0_#dcdcdc]
+  ; 
+}
+
+.btn-view_active {
+  @apply border-[#193a43] before:bg-[#193a43];
+  &.btn-view_2 {
+    @apply  before:shadow-[13px_0_#193a43];
+  }
+
+  &.btn-view_3 {
+    @apply  before:shadow-[13px_0_#193a43,26px_0_#193a43];
+  }
+
+  &.btn-view_4 {
+    @apply  before:shadow-[13px_0_#193a43,26px_0_#193a43,39px_0_#193a43];
+  }
+}
+
+.btn-view_3 {
+  @apply w-[49px]
+  before:shadow-[13px_0_#dcdcdc,26px_0_#dcdcdc];
+}
+
+.btn-view_4 {
+  @apply w-[62px]
+  before:shadow-[13px_0_#dcdcdc,26px_0_#dcdcdc,39px_0_#dcdcdc];
+}

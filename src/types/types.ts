@@ -12,3 +12,8 @@ export interface IProduct {
   image: string;
   rating: IRating;
 }
+
+export enum ThemeEnum {
+  DARK = 'dark',
+  LIGHT = 'light',
+}

@@ -1,0 +1,125 @@
+.list__item {
+  @apply 
+  max-w-[350px] min-w-[220px] w-full h-[400px] 
+  flex justify-center 
+  px-5
+  relative 
+  shadow-sm 
+  hover:shadow-md;
+
+  &:hover {
+    & .overlay {
+      @apply visible opacity-100;
+    }
+  }
+}
+
+.list__item.per-row_2 {
+  &:nth-child(2n+1) {
+    @apply justify-self-start;
+  }
+  &:nth-child(2n) {
+    @apply justify-self-end;
+  }
+}
+
+.list__item.per-row_3 {
+  &:nth-child(3n+1) {
+    @apply justify-self-start;
+  }
+  &:nth-child(3n+2) {
+    @apply justify-self-center;
+  }
+  &:nth-child(3n) {
+    @apply justify-self-end;
+  }
+}
+
+.list__item.per-row_4 {
+  &:nth-child(4n+1) {
+    @apply justify-self-start;
+  }
+  &:nth-child(4n+2), &:nth-child(4n+3) {
+    @apply justify-self-center;
+  }
+  &:nth-child(4n) {
+    @apply justify-self-end;
+  }
+}
+
+.product {
+  @apply text-center overflow-hidden flex w-full;
+}
+
+.img-container {
+  @apply overflow-hidden h-[65%] flex items-center justify-center relative;
+}
+
+.product__info {
+  @apply overflow-hidden h-[35%] flex flex-col justify-between py-4;
+}
+
+.product__link {
+  @apply w-full;
+}
+
+.product__img {
+  @apply block max-w-full max-h-full;
+}
+
+.product__title {
+  @apply text-[#193a43] uppercase;
+}
+
+.product__price {
+  @apply text-[1.1rem];
+}
+
+.overlay {
+  @apply flex absolute invisible opacity-0 transition-opacity duration-[.4s] ease-in;
+
+  &_bottom {
+    @apply w-full bottom-[0%] left-[0%] justify-between;
+  }
+
+  &_top {
+    @apply top-[0%] right-[0%] ;
+  }
+}
+
+.btn {
+  @apply relative
+  w-[48%] h-[40px] max-w-[170px]
+  bg-[#193a43]
+  flex items-center justify-center 
+  overflow-hidden
+  text-center text-white text-[11px] uppercase
+  z-10;
+
+  .btn__icon {
+    @apply w-4 h-4 flex items-center ml-2;
+    & > svg {
+      @apply w-full h-auto;
+    }
+  }
+}
+
+.btn-shop, .btn-cart {
+  @apply before:content-[''] before:bg-[#538c9b] before:h-full before:w-[0%]
+  before:absolute before:top-[0%] before:left-[0%] before:right-auto
+  before:transition-width before:duration-[0.3s] before:ease-in-out
+  before:z-[-1]  
+  hover:before:w-full hover:before:right-[0%] hover:before:left-[0%];
+}
+
+.btn-wishlist {
+  @apply h-10 w-10 bg-white text-[#193a43] text-center rounded-[50%]
+  transition-[background-color] duration-[0.3s] before:ease-in-out
+ 
+  hover:bg-[#538c9b] hover:text-white;
+
+  .btn__icon {
+    @apply ml-0;
+  }
+}
+

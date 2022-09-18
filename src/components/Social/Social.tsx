@@ -2,10 +2,15 @@ import React from 'react';
 import { FaFacebookF, FaPinterest, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import styles from './style.module.scss';
+import { ThemeEnum } from '../../types/types';
 
-const Social = () => {
+interface Props {
+  theme: ThemeEnum,
+}
+
+const Social = ({theme}: Props) => {
   return (
-    <ul className={`${styles.list} ${styles['social-icons']}`}>
+    <ul className={`${styles.list} ${styles[`list_${theme}`]} ${styles['social-icons']}`}>
       <li className={styles.list__item}>
         <a href="#" title='OwOrganics on Facebook'><FaFacebookF /></a>
       </li>

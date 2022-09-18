@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -14,5 +15,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(
+      function ({ addComponents }) {
+        const myComponents = {
+          '.color-transition': {
+            transition: 'color .3s ease-in',
+          },
+        }
+        addComponents(myComponents)
+      }),],
 }
