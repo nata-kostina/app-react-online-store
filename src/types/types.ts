@@ -17,3 +17,10 @@ export enum ThemeEnum {
   DARK = 'dark',
   LIGHT = 'light',
 }
+
+export type ICategory = string;
+
+export interface IFilterCategory {
+  id: string,
+  name: string,
+}

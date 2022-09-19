@@ -1,0 +1,63 @@
+.filter {
+  @apply max-w-[25%] basis-[25%] shrink-0 pr-10;
+}
+
+.accordion {
+  @apply text-[#193a43];
+  --cui-accordion-border-color: #ffffff00;
+  --cui-accordion-border-width: 0;
+  --cui-accordion-border-radius: 0;
+  --cui-accordion-active-bg: #ffffff00;
+  --cui-accordion-btn-focus-border-color: #193a43;
+  --cui-accordion-active-color: #193a43;
+  --cui-accordion-btn-focus-box-shadow: #ffffff00;
+}
+
+.accordion__item {
+  @apply border-b border-b-[#e9e9e9] pb-[25px];
+}
+
+.accordion__header {
+  :global {
+    .accordion-button {
+      @apply uppercase text-lg px-0 relative;
+
+      &.collapsed::after,  &:not(.collapsed)::after {
+        @apply absolute top-0 bottom-0 right-0
+        translate-y-[50%]
+        bg-none
+        text-right;
+      }
+
+      &.collapsed::after {
+        @apply content-["+"]      
+        border-none text-[36px];  
+      }
+
+      &:not(.collapsed)::after {
+        @apply content-[""] w-[15px]
+        border-b border-black;      
+      }
+
+      &:focus {
+        @apply shadow-none border-none;
+      }
+    }
+  }
+}
+
+.accordion__body {
+  @apply  p-0;
+}
+
+.list {
+
+}
+
+.list__item {
+  @apply py-2;
+  & .btn-category {
+    @apply text-sm
+    capitalize;
+  }
+}

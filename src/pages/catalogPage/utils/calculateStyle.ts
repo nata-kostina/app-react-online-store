@@ -1,3 +1,3 @@
 export const calculateStyleForGridContainer = (perRow: number): { [key: string]: string } =>({
-  'grid-template-columns': `repeat(${perRow}, 1fr)`
+  'gridTemplateColumns': `repeat(${perRow}, 1fr)`
 })

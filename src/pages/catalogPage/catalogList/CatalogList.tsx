@@ -11,10 +11,11 @@ import { calculateStyleForGridContainer } from './../utils/calculateStyle';
 import styles from './style.module.scss'
 
 interface Props {
-  products: IProduct[],
+  products: IProduct[] | undefined,
+  isDataFetching: boolean,
 }
 
-function CatalogList({ products }: Props) {
+function CatalogList({ products, isDataFetching }: Props) {
   const { perRow } = useAppSelector((state) => state.catalog);
   const dispatch = useAppDispatch();
   const handleAddToCart = (product: string) => {
@@ -31,16 +32,22 @@ function CatalogList({ products }: Props) {
   return (
     <Section title='Products'>
       <>
-      <div className={styles['catalog-heading']}>
-        <View perRow={perRow} handleChangeView={handleChangeView}/>
-      </div>
-        <ul className={`${styles.list} ${styles['products-list']}`} 
-        style={customStyles}
-        >
-          {products.map((product) => {
-            return <CatalogItem product={product} key={product.id} />
-          })}
-        </ul>
+        <div className={styles['catalog-heading']}>
+          <View perRow={perRow} handleChangeView={handleChangeView} />
+        </div>
+        <div className={styles.products}>
+          {isDataFetching && <p>Loading...</p>}
+          {!isDataFetching && <>
+            <ul className={`${styles.list} ${styles['products-list']}`}
+              style={customStyles}
+            >
+              {products && products.map((product) => {
+                return <CatalogItem product={product} key={product.id} />
+              })}
+              {!products && <p>No products were found.</p>}
+            </ul></>
+          }
+        </div>
       </>
     </Section>
   );
