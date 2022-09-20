@@ -1,10 +1,10 @@
 import React from 'react';
-import Logo from '../../components/logo/Logo';
-import Navigation from '../../components/navigation/Navigation';
+import Logo from '../../components/Logo/Logo';
+import Navigation from '../../components/Navigation/Navigation';
 import Container from '../Container/Container';
-import styles from './style.module.scss'
-import Search from '../../components/search/Search';
-import Cart from '../../components/cart/Cart';
+import Search from '../../components/Search/Search';
+import Cart from '../../components/Cart/Cart';
+import styles from './style.module.scss';
 
 const Header = () => {
   return (

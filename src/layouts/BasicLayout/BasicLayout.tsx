@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Main from '../Main/Main';
-import TopBar from '../../components/topBar/TopBar';
+import TopBar from '../../components/TopBar/TopBar';
 import Wrapper from '../Wrapper/Wrapper';
 import ScrollToTop from "react-scroll-to-top";
 import { BsArrowUp } from 'react-icons/bs';
