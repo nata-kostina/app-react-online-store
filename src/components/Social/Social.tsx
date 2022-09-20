@@ -12,19 +12,19 @@ const Social = ({theme}: Props) => {
   return (
     <ul className={`${styles.list} ${styles[`list_${theme}`]} ${styles['social-icons']}`}>
       <li className={styles.list__item}>
-        <a href="#" title='OwOrganics on Facebook'><FaFacebookF /></a>
+        <a href="#" className={styles.social__link} title='OwOrganics on Facebook'><FaFacebookF /></a>
       </li>
       <li className={styles.list__item}>
-        <a href="#" title='OwOrganics on Twitter'><AiOutlineTwitter /></a>
+        <a href="#" className={styles.social__link} title='OwOrganics on Twitter'><AiOutlineTwitter /></a>
       </li>
       <li className={styles.list__item}>
-        <a href="#" title='OwOrganics on Pinterest'><FaPinterest /></a>
+        <a href="#" className={styles.social__link} title='OwOrganics on Pinterest'><FaPinterest /></a>
       </li>
       <li className={styles.list__item}>
-        <a href="#" title='OwOrganics on Instagram'><FaInstagram /></a>
+        <a href="#" className={styles.social__link} title='OwOrganics on Instagram'><FaInstagram /></a>
       </li>
       <li className={styles.list__item}>
-        <a href="#" title='OwOrganics on Youtube'><FaYoutube /></a>
+        <a href="#" className={styles.social__link} title='OwOrganics on Youtube'><FaYoutube /></a>
       </li>
     </ul>
   );

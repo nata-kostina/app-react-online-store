@@ -15,7 +15,7 @@
 }
 
 .footer__copyright {
-  @apply py-5 border-t border-t-[#ece3df];;
+  @apply py-5 border-t-[#ece3df] border-t;
 }
 
 .section {
@@ -38,7 +38,7 @@
   @apply list-none;
 
   & .list__item {
-    @apply color-transition hover:text-[#538C9B];
+    @apply hover:text-[#538C9B] color-transition;
   }
 }
 
@@ -51,7 +51,7 @@
 }
 
 .link {
-  @apply no-underline;
+  @apply hover:text-[#538C9B] no-underline;
 }
 
 .link-usefull {
